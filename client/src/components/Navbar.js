@@ -25,7 +25,12 @@ const Navbar = () => {
       <NavLink exact activeClassName="active" to="/">
         <Box display="flex" alignItems="center">
           <Box margin={2} height={50} width={50}>
-            <Image src="./icons/logo.svg" alt="brew haha logo" />
+            <Image
+              naturalHeight={1}
+              naturalWidth={1}
+              src="./icons/logo.svg"
+              alt="brew haha logo"
+            />
           </Box>
           <Heading size="xs" color="orange">
             BrewHaha

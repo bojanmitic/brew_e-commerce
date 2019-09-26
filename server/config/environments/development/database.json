@@ -1,0 +1,20 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "ecommerce-spzp2.mongodb.net",
+        "port": 27017,
+        "database": "server",
+        "username": "bojanmitic",
+        "password": "Stanislava89",
+        "srv": true
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  }
+}
