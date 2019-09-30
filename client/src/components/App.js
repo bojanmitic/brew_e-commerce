@@ -8,13 +8,12 @@ import {
   Image,
   Text,
   SearchField,
-  Icon,
-  Spinner
+  Icon
 } from "gestalt";
-import Strapi from "strapi-sdk-javascript/build/main";
 import "./App.css";
 import Loader from "./Loader";
 
+import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 
@@ -128,7 +127,7 @@ class App extends Component {
             </Box>
           ))}
         </Box>
-        <Spinner show={loadingBrands} accessibilityLabel="Loading Spinner" />
+        <Loader show={loadingBrands} />
       </Container>
     );
   }
