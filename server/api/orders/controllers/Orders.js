@@ -66,13 +66,13 @@ module.exports = {
     //Send charge to stripe
     const charge = await stripe.charges.create({
       amount: amount * 100,
-      currency: "eur",
+      currency: 'eur',
       description: `Order ${new Date(Date.now())} - User ${ctx.state.user._id}`,
       source: token
     });
 
     //Create Order in database
-    const order = await strapi.services.order.add({
+    const order = await strapi.services.orders.add({
       user: ctx.state.user._id,
       address,
       amount,
